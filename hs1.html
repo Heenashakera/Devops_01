@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Diagram</title>
+    <style>
+        .mouse-body {
+            fill: #cccccc;
+            stroke: #666666;
+            stroke-width: 2;
+        }
+        .mouse-button {
+            fill: #ffffff;
+            stroke: #666666;
+            stroke-width: 1;
+        }
+        .mouse-button:hover {
+            fill: #aaaaaa;
+        }
+        .scroll-wheel {
+            fill: #000000;
+        }
+        .scroll-wheel:hover {
+            fill: #555555;
+        }
+    </style>
+</head>
+<body>
+    <div class="mouse-diagram">
+        <svg viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg" width="200" height="300">
+            <!-- Mouse body -->
+            <ellipse cx="50" cy="75" rx="40" ry="60" class="mouse-body"/>
+            <!-- Left button -->
+            <path d="M50 15 A20 30 0 0 1 70 45 L50 75 Z" class="mouse-button"/>
+            <!-- Right button -->
+            <path d="M50 15 A20 30 0 0 0 30 45 L50 75 Z" class="mouse-button"/>
+            <!-- Scroll wheel -->
+            <circle cx="50" cy="45" r="5" class="scroll-wheel"/>
+        </svg>
+    </div>
+</body>
+</html>
+
